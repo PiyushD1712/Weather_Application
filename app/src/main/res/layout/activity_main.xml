@@ -20,6 +20,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/back_weather"
         android:orientation="vertical"
+        android:id="@+id/idLinearLayout"
         android:padding="16dp"
         tools:context=".MainActivity">
         <EditText
@@ -29,18 +30,13 @@
             android:background="@drawable/background_search"
             android:elevation="1dp"
             android:paddingStart="20dp"
+            android:drawableStart="@drawable/search_ic"
+            android:drawablePadding="10dp"
             android:textColor="@color/black"
             android:paddingEnd="20dp"
             android:inputType="text"
             android:textColorHighlight="@color/black"
             android:hint="Location"/>
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Search"
-            android:textColor="@color/white"
-            android:layout_gravity="center_horizontal"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,6 +51,7 @@
                 android:text="@{loc.locationName}"
                 android:textSize="40sp"
                 android:layout_marginTop="20dp"
+                android:textStyle="bold"
                 android:layout_gravity="start"/>
             <TextView
                 android:id="@+id/idRegion"
