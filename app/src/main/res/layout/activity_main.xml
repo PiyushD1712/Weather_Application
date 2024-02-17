@@ -67,17 +67,10 @@
                 android:text="@{loc.countryName}"
                 android:layout_gravity="start"
                 android:textSize="20sp"/>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/transparent"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="2dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/blue_transparent"
+                    android:background="@drawable/card_back"
                     android:orientation="horizontal"
                     android:padding="10dp">
                     <LinearLayout
@@ -122,129 +115,107 @@
                         android:layout_weight="0.8"
                         android:scaleType="fitXY"/>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <GridLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:columnCount="2">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    app:cardElevation="1dp"
-                    app:cardCornerRadius="3dp"
-                    app:cardUseCompatPadding="true"
-                    android:backgroundTint="@color/transparent">
-                    <LinearLayout
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/card_back">
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:background="@color/blue_transparent">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Wind Speed"
-                            android:textSize="20sp"
-                            android:gravity="center_horizontal"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:text='@{Double.toString(curr.windSpeed)+" Km/h"}'
-                            android:gravity="center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:text="Wind Speed"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text='@{Double.toString(curr.windSpeed)+" Km/h"}'
+                        android:gravity="center_horizontal"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_back">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@{Double.toString(curr.humidity)}"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="100dp"
-                    app:cardElevation="1dp"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="3dp"
-                    app:cardUseCompatPadding="true"
-                    android:backgroundTint="@color/transparent">
-                    <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_back">
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:background="@color/blue_transparent">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Humidity"
-                            android:textSize="20sp"
-                            android:gravity="center_horizontal"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:text="@{Double.toString(curr.humidity)}"
-                            android:gravity="center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:text="Visibility"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@{Double.toString(curr.visibility)}"
+                        android:gravity="center_horizontal"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="100dp"
-                    app:cardElevation="1dp"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="3dp"
-                    app:cardUseCompatPadding="true"
-                    android:backgroundTint="@color/transparent">
-                    <LinearLayout
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_back">
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:background="@color/blue_transparent">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Visibility"
-                            android:textSize="20sp"
-                            android:gravity="center_horizontal"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:text="@{Double.toString(curr.visibility)}"
-                            android:gravity="center_horizontal"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    app:cardElevation="1dp"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="3dp"
-                    app:cardUseCompatPadding="true"
-                    android:backgroundTint="@color/transparent">
-                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:text="Feels Like"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"/>
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:background="@color/blue_transparent">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Feels Like"
-                            android:textSize="20sp"
-                            android:gravity="center_horizontal"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:text='@{Double.toString(curr.feelsLikeC)+" °C"}'
-                            android:gravity="center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text='@{Double.toString(curr.feelsLikeC)+" °C"}'
+                        android:gravity="center_horizontal"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </GridLayout>
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </layout>
